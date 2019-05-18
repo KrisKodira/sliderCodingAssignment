@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-    //TODO: giove first picture padding and last picture minus that as margin right
-
     var imageSlider = $(".slider");
     var imageCount = imageSlider.find("img").length;
     var lastImageWidth = 0;
@@ -12,7 +10,6 @@ $(document).ready(function(){
     var clickFired = function () {  
         if(currImageIndex == 4){
             $(".arrow-right").addClass("disabled");
-            console.log("is 4");
         }
         else{
             $(".arrow-right").removeClass("disabled");
@@ -37,8 +34,6 @@ $(document).ready(function(){
 
         currImageIndex++;
 
-        console.log(currImageIndex);
-
         clickFired();
     });
 
@@ -52,8 +47,6 @@ $(document).ready(function(){
         imageSlider.find("img:last-child").animate({"margin-right": "-"+currRightMargin+"px"}, 250);
 
         currImageIndex--;
-
-        console.log(currImageIndex);
 
         clickFired();
     });
