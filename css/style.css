@@ -1,0 +1,144 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  background-repeat: no-repeat;
+  -webkit-transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  -moz-transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  -ms-transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  -o-transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif; }
+
+h1 {
+  color: #134880;
+  font-size: 2.4em;
+  font-weight: bolder;
+  margin-bottom: 20px; }
+
+p {
+  line-height: 1.8em;
+  font-weight: lighter;
+  font-size: 1.4em; }
+
+main {
+  height: 1000px; }
+
+header, footer {
+  background-color: #134880;
+  height: 200px;
+  width: 100%; }
+
+.flex-wrap {
+  display: flex;
+  margin-top: 60px;
+  width: 100%; }
+  .flex-wrap .text-wrap {
+    width: 30%;
+    margin: 40px; }
+
+img {
+  border-radius: 5px;
+  padding: 5px; }
+
+.slider {
+  width: 70%;
+  position: relative;
+  height: 840px; }
+  .slider .image-wrap {
+    position: relative;
+    display: block;
+    height: 100%; }
+    .slider .image-wrap .items {
+      position: absolute;
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      width: 3000px;
+      position: absolute;
+      right: 40px;
+      overflow: hidden; }
+      .slider .image-wrap .items img:last-child {
+        padding-right: 100px; }
+  .slider .arrow-wrap {
+    position: absolute;
+    right: 40px;
+    top: 405px;
+    padding-top: 100px;
+    padding-bottom: 130px;
+    padding-left: 20px;
+    background-color: #fff; }
+    .slider .arrow-wrap .arrow-left, .slider .arrow-wrap .arrow-right {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      border: 2px solid #134880;
+      border-radius: 5px;
+      background-position: center center;
+      cursor: pointer; }
+      .slider .arrow-wrap .arrow-left:hover, .slider .arrow-wrap .arrow-right:hover {
+        background-color: #a1c8f1; }
+      .slider .arrow-wrap .arrow-left.disabled, .slider .arrow-wrap .arrow-right.disabled {
+        border: 2px solid #EEEEEE; }
+        .slider .arrow-wrap .arrow-left.disabled:hover, .slider .arrow-wrap .arrow-right.disabled:hover {
+          background-color: #fff;
+          cursor: auto; }
+    .slider .arrow-wrap .arrow-left {
+      background-image: url("../images/ui/arrow-blue-left.png");
+      margin-bottom: 20px; }
+      .slider .arrow-wrap .arrow-left.disabled {
+        background-image: url("../images/ui/arrow-gray-left.png"); }
+    .slider .arrow-wrap .arrow-right {
+      background-image: url("../images/ui/arrow-blue-right.png"); }
+      .slider .arrow-wrap .arrow-right.disabled {
+        background-image: url("../images/ui/arrow-gray-right.png"); }
+
+/*# sourceMappingURL=style.css.map */

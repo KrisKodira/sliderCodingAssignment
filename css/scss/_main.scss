@@ -1,0 +1,155 @@
+//Colors
+$primary: #134880;
+$white: #fff;
+$black: #000;
+$disabled: #EEEEEE;
+
+//Misc vars
+$animSpeed: 150ms;
+$animEase: ease-in-out;
+
+//Mixins
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+
+
+// -------- SCSS --------
+//Base
+*{
+    background-repeat: no-repeat;
+    
+    @include transition(
+        background-color $animSpeed $animEase, 
+        color $animSpeed $animEase
+    );
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: $primary;
+    font-size: 2.4em;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+p{
+    line-height: 1.8em;
+    font-weight: lighter;
+    font-size: 1.4em;
+}
+
+main{
+    height: 1000px;
+}
+
+header, footer{
+    background-color: $primary;
+    height: 200px;
+    width: 100%;
+}
+
+.flex-wrap{
+    display: flex;
+    margin-top: 60px;
+    width: 100%;
+
+    .text-wrap{
+        width: 30%;
+        margin: 40px;
+    }
+}
+
+img{
+    border-radius: 5px;
+    padding: 5px;
+}
+
+//Slider
+.slider{
+    width: 70%;
+    position: relative;
+    height: 840px;
+
+    .image-wrap{
+        position: relative;
+        display: block;
+        height: 100%;
+
+        .items{
+            position: absolute;
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            width: 3000px;
+            position: absolute;
+            right: 40px;
+            overflow: hidden;
+
+            img:last-child{
+                padding-right: 100px;
+            }
+        }
+    }
+
+    .arrow-wrap{
+        position: absolute;
+        right: 40px;
+        top: 405px;
+        padding-top: 100px;
+        padding-bottom: 130px;
+        padding-left: 20px;
+        background-color: $white;
+
+        .arrow-left, .arrow-right{
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border: 2px solid $primary;
+            border-radius: 5px;
+            background-position: center center;
+            cursor: pointer;
+
+            &:hover{
+                background-color: lighten($primary, 50%);
+            }
+
+            &.disabled{
+                border: 2px solid $disabled;
+
+                &:hover{
+                    background-color: $white;
+                    cursor: auto;
+                }
+            }
+        }
+
+        .arrow-left{
+            background-image: url("../images/ui/arrow-blue-left.png");
+            margin-bottom: 20px;
+
+            &.disabled{
+                background-image: url("../images/ui/arrow-gray-left.png");
+            }
+        }
+
+        .arrow-right{
+            background-image: url("../images/ui/arrow-blue-right.png");
+
+            &.disabled{
+                background-image: url("../images/ui/arrow-gray-right.png");
+            }
+        }
+    }
+}
+
